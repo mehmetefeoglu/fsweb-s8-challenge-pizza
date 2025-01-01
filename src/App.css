@@ -5,38 +5,47 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+body {  
+  margin: 0; /* Varsayılan kenar boşluklarını sıfırla */  
+  font-family: Arial, sans-serif; /* Yazı tipi ayarı */  
+}  
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.app-container {  
+  background-color: #FAF7F2; /* Arka plan rengi */  
+  min-height: 100vh; /* Tüm ekran yüksekliği kaplasın */  
+  display: flex;  
+  flex-direction: column; /* Dikey hizalama */  
+}  
+@media (max-width: 768px) {  
+  .header, .footer {  
+    padding: 15px; /* Mobil cihazlar için padding ayarlayın */  
+  }  
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+  .header h1 {  
+    font-size: 24px; /* Başlık boyutunu küçük ekranlar için ayarlayın */  
+  }  
 
-.card {
-  padding: 2em;
-}
+  .header nav p {  
+    font-size: 14px; /* Gezinme göstergesi font boyutunu ayarlayın */  
+  }  
 
-.read-the-docs {
-  color: #888;
-}
+  .order-form {  
+    padding: 10px; /* Sipariş formu için dolgu ayarlayın */  
+  }  
+
+  /* Form elemanları için responsive düzenlemeler */  
+  input[type="text"],  
+  input[type="number"],  
+  select,  
+  textarea {  
+    width: 100%; /* Tüm form elemanlarını tam genişlik ayarlayın */  
+    margin: 5px 0; /* Elemanlar arası boşluk */  
+    padding: 10px; /* İç boşluk */  
+    box-sizing: border-box; /* Padding'in genişliği etkilemesini önlemek için */  
+  }  
+
+  button {  
+    width: 100%; /* Buton genişliğini ayarlayın */  
+    padding: 10px; /* İç boşluk */  
+  }  
+}  
