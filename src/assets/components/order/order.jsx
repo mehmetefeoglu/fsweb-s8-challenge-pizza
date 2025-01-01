@@ -39,7 +39,7 @@ import './Order.css';
           const handleSubmit = (e) => {  
             e.preventDefault(); 
 
-            const orders = {  
+            const order = {  
                 name,  
                 size,  
                 doughType,  
@@ -48,7 +48,7 @@ import './Order.css';
                 quantity,  
                 total: calculateTotal(),  
               };  
-              onSubmit(orders); // Siparişi App bileşenine gönder  
+              onSubmit(order); // Siparişi App bileşenine gönder  
             };  
             const calculateTotal = () => {  
                 const basePrice = 85.50; // Varsayılan pizza tutarı  

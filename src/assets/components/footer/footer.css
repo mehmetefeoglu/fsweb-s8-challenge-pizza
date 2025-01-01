@@ -1,0 +1,9 @@
+.footer {  
+    background-color: #FAF7F2; /* Koyu arka plan */  
+    color: white;  
+    text-align: center;  
+    padding: 10px;  
+    position: relative; /* Sticky footer için */  
+    bottom: 0; /* Dibe yerleşmesi için */  
+    width: 100%; /* Tüm genişliğe yayılsın */  
+  }

@@ -1,0 +1,50 @@
+.order-form{  
+    width: 300px; /* Formun genişliği */  
+    margin: 20px auto; /* Ortada konumlandır */  
+    padding: 20px;  
+    border: 1px solid #ccc; /* Kenar çizgisi */  
+    border-radius: 8px; /* Köşeleri yuvarlat */  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Gölgelendirme */  
+    background-color: #f9f9f9; /* Arka plan rengi */  
+}  
+.order-form h2 {  
+    text-align: center; /* Başlık ortada */  
+    margin-bottom: 20px; /* Altında boşluk bırak */  
+}  
+.order-form input[type="text"],  
+.order-form select,  
+.order-form textarea,  
+.order-form input[type="number"] {  
+    width: 100%; /* Genişliği %100 yap */  
+    padding: 10px; /* İç boşluk */  
+    margin-bottom: 10px; /* Altında boşluk */  
+    border: 1px solid #ccc; /* Kenar çizgisi */  
+    border-radius: 4px; /* Köşeleri yuvarlat */  
+}  
+.order-form input[type="checkbox"] {  
+    margin-right: 10px; /* Sağında boşluk */  
+}  
+.order-form .quantity-container {  
+    display: flex; /* Esnek düzen kullan */  
+    align-items: center; /* Ortada hizala */  
+}  
+.order-form .quantity-container label {  
+    margin-right: 10px; /* Sağında boşluk bırak */  
+}  
+.order-form button {  
+    width: 100%; /* Genişliği %100 yap */  
+    padding: 10px; /* İç boşluk */  
+    background-color: #FDC913; /* Buton rengi */  
+    color: white; /* Metin rengi */  
+    border: none; /* Kenar çizgisi yok */  
+    border-radius: 4px; /* Köşeleri yuvarlat */  
+    cursor: pointer; /* Üzerine gelince işaretçi değiştir */  
+    font-weight: bold; /* Kalın metin */  
+}  
+.order-form button:hover {  
+    background-color: #0056b3; /* Üzerine gelince koyulaşsın */  
+}  
+.order-form p {  
+    text-align: center; /* Toplamı ortala */  
+    font-weight: bold; /* Kalın metin */  
+}  
