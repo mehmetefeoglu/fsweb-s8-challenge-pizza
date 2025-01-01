@@ -1,16 +1,23 @@
+
 #root {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding:0;
   text-align: center;
+  font-family: Arial, sans-serif; /* Yazı tipi ayarı */ 
 }
-
 body {  
   margin: 0; /* Varsayılan kenar boşluklarını sıfırla */  
-  font-family: Arial, sans-serif; /* Yazı tipi ayarı */  
+  padding : 0;
+ 
+  
 }  
 
 .app-container {  
+
+
+
   background-color: #FAF7F2; /* Arka plan rengi */  
   min-height: 100vh; /* Tüm ekran yüksekliği kaplasın */  
   display: flex;  
@@ -18,27 +25,27 @@ body {
 }  
 @media (max-width: 768px) {  
   .header, .footer {  
-    padding: 15px; /* Mobil cihazlar için padding ayarlayın */  
+    padding: 15px; /* Mobil cihazlar için padding ayarlama */  
   }  
 
   .header h1 {  
-    font-size: 24px; /* Başlık boyutunu küçük ekranlar için ayarlayın */  
+    font-size: 24px; /* Başlık boyutunu küçük ekranlar için ayarlama */  
   }  
 
   .header nav p {  
-    font-size: 14px; /* Gezinme göstergesi font boyutunu ayarlayın */  
+    font-size: 14px; /* Gezinme göstergesi font boyutunu ayarlama */  
   }  
 
   .order-form {  
-    padding: 10px; /* Sipariş formu için dolgu ayarlayın */  
+    padding: 10px; /* Sipariş formu için dolgu ayarlama */  
   }  
 
-  /* Form elemanları için responsive düzenlemeler */  
+  /* Form elemanları için responsive düzenleme */  
   input[type="text"],  
   input[type="number"],  
   select,  
   textarea {  
-    width: 100%; /* Tüm form elemanlarını tam genişlik ayarlayın */  
+    width: 100%; /* Tüm form elemanlarını tam genişlik ayarlama */  
     margin: 5px 0; /* Elemanlar arası boşluk */  
     padding: 10px; /* İç boşluk */  
     box-sizing: border-box; /* Padding'in genişliği etkilemesini önlemek için */  

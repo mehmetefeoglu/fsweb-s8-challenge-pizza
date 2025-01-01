@@ -2,8 +2,10 @@
     background-color: #CE2829;   
     color: white;  
     padding: 20px;  
-    text-align: center;  
-  }  
+    text-align: center; 
+    width: 100%; /* Tüm genişliğe yayılsın */  
+      } 
+    
   
   .header nav p {  
     margin: 10px 0 0 0;  

@@ -1,0 +1,21 @@
+.order-button{
+
+    background-color: #FDC913;
+    border-radius: 20px;
+    padding: 15px 30px; 
+    font-size: 16px;  
+    cursor: pointer;  
+   
+}
+/* Home.css */  
+.hero {  
+    background-image: url("C:\Users\HP-NOTEBOOK\Documents\GitHub\fsweb-s8-challenge-pizza\images\iteration-1-images\home-banner.png"); 
+    background-size:cover;  
+    background-position: center; /* Arka planın ortalanmasını sağla */  
+    text-align: center; /* Metin ortada hizalı */   
+    height: 100vh; /* Tüm ekran yüksekliği */  
+    color:#FAF7F2;
+  }  
+  
+  
+  

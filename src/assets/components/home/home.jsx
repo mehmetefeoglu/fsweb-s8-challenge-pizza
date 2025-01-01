@@ -7,8 +7,7 @@ const Home = ({ setShowOrderForm }) => {
   };  
 
   return (  
-    <div className="hero">  
-      <h3>Teknolojik Yemekler</h3>  
+    <div className="hero">   
       <h1>KOD ACIKTIRIR, <br /> PİZZA DOYURUR</h1>  
       <button className="order-button" onClick={handleOrderClick}>  
         ACIKTIM 
