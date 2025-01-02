@@ -1,9 +1,9 @@
 
 .successMessage {  
     
-    background-color: #CE2829; /* Arka plan rengini ayarlayın */  
-    color: white; /* Yazı rengini beyaz yaparak okunabilirliği artırın */  
+    background-color: #CE2829;  
+    color: white;  
     height:100vw;
-    text-align:center; /* Yazıyı ortalayın */  
+    text-align:center;  
     
 } 

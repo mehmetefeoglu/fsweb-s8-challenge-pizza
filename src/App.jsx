@@ -11,8 +11,11 @@ const App = () => {
   const [orderSuccess, setOrderSuccess] = useState(false); // Sipariş başarısı durumu  
   const [order, setOrder] = useState(null); // Sipariş bilgilerini saklamak için durum  
 
-  const handleOrderSubmit = (orderData) => {  
-    setOrder(orderData); // Sipariş bilgilerini sakla  
+ 
+    
+   const handleOrderSubmit = (orderData) => {  
+    setOrder(orderData) // Sipariş bilgilerini sakla  
+
     setOrderSuccess(true); // Sipariş başarı durumunu true yap  
     setShowOrderForm(false); // Sipariş formunu kapat  
   };  

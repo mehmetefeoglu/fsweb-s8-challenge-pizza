@@ -1,19 +1,22 @@
-import React from 'react';
+
+import React from 'react';  
 import './success.css';  
-//<p><strong>İsim:</strong> {order.name}</p>  
-     // <p><strong>Boyut:</strong> {order.size}</p>  
-     // <p><strong>Hamur:</strong> {order.doughType}</p>  
-    //  <p><strong>Ek Malzemeler:</strong> {order.toppings.join(', ')}</p>  
-     // <p><strong>Notlar:</strong> {order.note}</p>  
-    //  <p><strong>Miktar:</strong> {order.quantity}</p>  
-    //  <p><strong>Sipariş Toplamı:</strong> {order.total.toFixed(2)}₺</p> 
-const Success = ({ order }) => {  
-  return (  
-    <div className='successMessage'>  
-      <h1>TEBRİKLER! <br /> SİPARİŞİNİZ ALINDI!</h1>  
-      
-    </div>  
-  );  
+
+const Success = ({ resetOrder, order }) => {  
+    return (  
+        <div className='successMessage'>  
+            <h1>TEBRİKLER! <br /> SİPARİŞİNİZ ALINDI!</h1>  
+            <p><strong>İsim:</strong> {order.isim}</p>  
+            <p><strong>Hamur:</strong> {order.hamur}</p> {/* Düzeltme yapıldı */}  
+            <p><strong>Boyut:</strong> {order.boyut}</p>  {/* Düzeltme yapıldı */}  
+             
+            <p><strong>Ek Malzemeler:</strong> {order.malzemeler.length > 0 ? order.malzemeler.join(', ') : 'Yok'}</p>  
+            <p><strong>Notlar:</strong> {order.özel || 'Yok'}</p>  
+            <p><strong>Miktar:</strong> {order.miktar}</p>  
+            <p><strong>Sipariş Toplamı:</strong> {((order.total || 0).toFixed(2))}₺</p>   
+            <button onClick={resetOrder}>Yeni Sipariş Ver</button>  
+        </div>  
+    );  
 };  
 
 export default Success;  

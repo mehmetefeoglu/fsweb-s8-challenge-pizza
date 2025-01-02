@@ -22,9 +22,7 @@
     border-radius: 4px; /* Köşeleri yuvarlat */  
 }  
 .order-form input[type="checkbox"] {  
-   display:flex;
-   
-   
+   display:flex; 
   gap: 1rem;
   flex-wrap: var(--var-flex-wrap);
     margin-right: 10px; /* Sağında boşluk */  

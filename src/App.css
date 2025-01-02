@@ -10,14 +10,9 @@
 body {  
   margin: 0; /* Varsayılan kenar boşluklarını sıfırla */  
   padding : 0;
- 
-  
 }  
 
 .app-container {  
-
-
-
   background-color: #FAF7F2; /* Arka plan rengi */  
   min-height: 100vh; /* Tüm ekran yüksekliği kaplasın */  
   display: flex;  
