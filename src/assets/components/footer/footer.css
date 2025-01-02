@@ -1,9 +1,62 @@
+
+
 .footer {  
-    background-color: #FAF7F2; 
-    color: white;  
-    text-align: center;  
-    padding: 10px;  
-    position: relative; /* Sticky footer için */  
-    bottom: 0; /* Dibe yerleşmesi için */  
-    width: 100%; /* Tüm genişliğe yayılsın */  
+  font-family:'Courier New', Courier, monospace;
+  background-color:black; /* Koyu arka plan */  
+  color: #f0f0f0; /* Açık yazı rengi */  
+  padding: 20px 0;  
+  font-size: 14px;  
+}  
+.footer-section-about{
+  display: flex;
+  flex-direction: column; 
+  text-align:left;
+  padding-left: 50px; 
+
+}
+
+.footer-content {  
+ 
+  display: flex;  
+  justify-content: space-between;  
+  max-width: 1200px;  
+  margin:0;
+  
+}
+  
+  .footer-section menu{
+    display:flex;
+    flex-direction: column;
+    font-family:'Barlow';
+    text-align:left;
+    }
+    .hot-menu{
+      display:flex;
+      flex-direction: column;;
+      text-align:left;
+    }
+  .under{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 35px; }
+  
+    .instagram-images1{
+      display: flex;;
+      justify-content: space-between;
+      row-gap: 10px;
+      padding: 10px;
+    }
+    .instagram-images2{
+      display: flex;;
+     justify-content: space-between;
+      padding: 10px;
+    }
+    .h_line {  
+      width: 100%;        
+      height: 0.07px;       
+      background-color:lightslategrey;  
+      border: none;  
+  }  
+  .title{
+    font-family:fantasy
   }

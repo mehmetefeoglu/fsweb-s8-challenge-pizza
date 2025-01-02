@@ -6,8 +6,8 @@ const availableToppings = [
     'Tavuk Izgara',  
     'Mısır',  
     'Sarmısak',   
-    'Ananas',
-    'Sucuk', 
+    'Ananas',  
+    'Sucuk',  
     'Sosis',  
     'Soğan',    
     'Biber',  
@@ -35,59 +35,62 @@ const Order = ({ onSubmit }) => {
         setSize(e.target.value);  
     };  
 
+    const calculateTotal = () => {  
+        const basePrice = 85.50;  
+        const toppingPrice = 5;  
+        return (basePrice + (toppings.length * toppingPrice)) * quantity;  
+    };  
+
     const handleSubmit = async (e) => {  
       e.preventDefault();   
+
+      const total = calculateTotal(); // Toplamı hesapla  
 
       const orderData = {  
           isim: name,  
           boyut: size,  
           malzemeler: toppings,  
           özel: note,  
-          miktar: quantity,
-          hamur: doughType 
+          miktar: quantity,  
+          hamur: doughType,  
+          total: total  // Toplamı buraya ekliyoruz   
       };  
 
       try {  
           const response = await axios.post('https://reqres.in/api/pizza', orderData);  
           console.log('Gelen Yanıt:', response.data);  
-          onSubmit(response.data); // Siparişi App bileşenine gönder  
+          onSubmit(orderData); // Siparişi App bileşenine gönder   
       } catch (error) {  
           console.error('Hata:', error);  
       }  
-  };  
-
-    const calculateTotal = () => {  
-        const basePrice = 85.50;  
-        const toppingPrice = 5;  
-        return basePrice + (toppings.length * toppingPrice) * quantity;  
     };  
 
     return (  
         <form className="order-form" onSubmit={handleSubmit}>  
             <h2>Pizza Sipariş Formu</h2>  
-            <label htmlFor="name">
-            <input  
-             autoComplete="name"
-                type="text"   
-                value={name}   
-                onChange={(e) => setName(e.target.value)}   
-                placeholder="İsim" 
-                id="name"
-                name="name"  
-                required   
-            />  
-              </label>
+            <label htmlFor="name">  
+                <input  
+                    autoComplete="name"  
+                    type="text"   
+                    value={name}   
+                    onChange={(e) => setName(e.target.value)}   
+                    placeholder="İsim"   
+                    id="name"  
+                    name="name"  
+                    required   
+                />  
+            </label>  
             <h3>Boyut Seç:</h3>  
             <label htmlFor="Küçük" >  
                 <input   
                     type="radio"   
                     value="Küçük"   
                     checked={size === 'Küçük'}   
-                    onChange={handleSizeChange} 
-                    id="Küçük"
+                    onChange={handleSizeChange}   
+                    id="Küçük"  
                     required   
                 />  
-                Küçük  
+                S 
             </label>  
 
             <label htmlFor="Orta">  
@@ -96,10 +99,10 @@ const Order = ({ onSubmit }) => {
                     value="Orta"   
                     checked={size === 'Orta'}   
                     onChange={handleSizeChange}  
-                    id="Orta" 
+                    id="Orta"   
                     required   
                 />  
-                Orta  
+                M  
             </label>  
 
             <label htmlFor="Büyük">  
@@ -107,46 +110,46 @@ const Order = ({ onSubmit }) => {
                     type="radio"   
                     value="Büyük"   
                     checked={size === 'Büyük'}   
-                    onChange={handleSizeChange}
+                    onChange={handleSizeChange}  
                     id="Büyük"   
                     required   
                 />  
-                Büyük  
+                L  
             </label>  
 
             <select value={doughType} onChange={(e) => setDoughType(e.target.value)} required>  
-                <option  value="Hamur Seç">Hamur Kalınlığı</option>  
-                <option  value="İnce">İnce</option>  
-                <option  value="Kalın">Kalın</option>  
+                <option value="Hamur Seç">Hamur Kalınlığı</option>  
+                <option value="İnce">İnce</option>  
+                <option value="Kalın">Kalın</option>  
             </select>  
 
             <label>Ek Malzemeler:</label>  
-{availableToppings.map((topping, index) => (  
-    <div key={topping}>  
-        <input  
-            id={`topping-${index}`} // Benzersiz id   
-            name="topping"  
-            type="checkbox"   
-            checked={toppings.includes(topping)}   
-            onChange={() => handleToppingChange(topping)}   
-        />  
-        <label htmlFor={`topping-${index}`}>{topping}</label> {/* Etiketin ilişkilendirilmesi için aynı id */}  
-    </div>  
-))}  
+            {availableToppings.map((topping, index) => (  
+                <div key={topping}>  
+                    <input  
+                        id={`topping-${index}`} // Benzersiz id oluşturma  
+                        name="topping"  
+                        type="checkbox"   
+                        checked={toppings.includes(topping)}   
+                        onChange={() => handleToppingChange(topping)}   
+                    />  
+                    <label htmlFor={`topping-${index}`}>{topping}</label>  
+                </div>  
+            ))}  
              
             <textarea   
-                value={note} 
-                id = "note"  
+                value={note}   
+                id="note"  
                 onChange={(e) => setNote(e.target.value)}   
                 placeholder="Sipariş Notu"   
             />  
             
             <div className="quantity-container">  
-                <label htmlFor="quantity" >Miktar:</label>  
-                <input 
-                name="quantity" 
+                <label htmlFor="quantity">Miktar:</label>  
+                <input   
+                    name="quantity"   
                     type="number"  
-                    id = "quantity"  
+                    id="quantity"  
                     value={quantity}  
                     onChange={(e) => setQuantity(e.target.value)}  
                     min="1"  

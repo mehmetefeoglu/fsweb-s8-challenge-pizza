@@ -2,19 +2,19 @@
 import React from 'react';  
 import './success.css';  
 
-const Success = ({ resetOrder, order }) => {  
+const Success = ({ order }) => { 
+  let secim = (order.malzemeler.length)*5
     return (  
+      
         <div className='successMessage'>  
-            <h1>TEBRİKLER! <br /> SİPARİŞİNİZ ALINDI!</h1>  
-            <p><strong>İsim:</strong> {order.isim}</p>  
-            <p><strong>Hamur:</strong> {order.hamur}</p> {/* Düzeltme yapıldı */}  
-            <p><strong>Boyut:</strong> {order.boyut}</p>  {/* Düzeltme yapıldı */}  
-             
-            <p><strong>Ek Malzemeler:</strong> {order.malzemeler.length > 0 ? order.malzemeler.join(', ') : 'Yok'}</p>  
-            <p><strong>Notlar:</strong> {order.özel || 'Yok'}</p>  
-            <p><strong>Miktar:</strong> {order.miktar}</p>  
-            <p><strong>Sipariş Toplamı:</strong> {((order.total || 0).toFixed(2))}₺</p>   
-            <button onClick={resetOrder}>Yeni Sipariş Ver</button>  
+            <h4>lezzetin yolda</h4>
+            <h1> SİPARİŞ ALINDI</h1>  
+            <p>İsim: <strong>{order.isim}</strong> </p>  
+            <p>Boyut: <strong>{order.boyut}</strong> </p> 
+            <p>Hamur: <strong>{order.hamur}</strong> </p>    
+            <p>Ek Malzemeler: <strong>{order.malzemeler.length > 0 ? order.malzemeler.join(', ') : 'Yok'}</strong> </p>  
+            <p>Sipariş Toplamı <br />Seçimler:<strong> {secim}₺ <br /></strong>Toplam <strong>{((order.total || 0).toFixed(2))}₺</strong> </p> 
+            
         </div>  
     );  
 };  
