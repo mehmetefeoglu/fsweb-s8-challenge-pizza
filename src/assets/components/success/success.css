@@ -1,9 +1,30 @@
 
 .successMessage {  
-    
+    max-height: 1080px;
     background-color: #CE2829;  
-    color: white;  
-    height:100vw;
+    color:#FFFFFF; 
+    height:100vh;
     text-align:center;  
     
 } 
+.text-lezzet{
+    color: #FDC913;
+}
+.h-line{
+    width: 35%;  
+    height: 0.1px;  
+    background-color: #FFFFFF; 
+    margin: 0 auto}
+    .total {  
+        display: flex;
+        flex-direction: column;
+        border: 0.5px solid #FFFFFF; /* Çerçeve rengi ve kalınlığı */  
+        padding: 40px;  
+        text-align:left;   
+        margin-top: 20px; 
+        width: 20%; /* Çerçevenin genişliği */  
+        margin-left: auto;   
+        margin-right: auto;  
+       
+
+    }  

@@ -30,7 +30,7 @@ const App = () => {
   if (showOrderForm) {  
     currentStep = 'Anasayfa/Sipariş Formu';  
   } else if (orderSuccess) {  
-    currentStep = 'Anasayfa/Sipariş Başarılı';  
+    currentStep = '';  
   }  
 
   return (  

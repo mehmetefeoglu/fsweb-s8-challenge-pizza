@@ -1,22 +1,26 @@
 
 #root {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1920px;
   margin: 0 auto;
   padding:0;
   text-align: center;
   
 }
-body {  
-  margin: 0; /* Varsayılan kenar boşluklarını sıfırla */  
+body { 
+  width: 1920px;
+  margin: 0 auto; 
   padding : 0;
+  
 }  
 
-.app-container {  
-  background-color: #FAF7F2; /* Arka plan rengi */  
-  min-height: 100vh; /* Tüm ekran yüksekliği kaplasın */  
+.app-container {
+  max-width: 1920px;
+  width: 100vw; 
+  background-color: #FAF7F2; 
+  min-height: 100vh; 
   display: flex;  
-  flex-direction: column; /* Dikey hizalama */  
+  flex-direction: column; 
 }  
 @media (max-width: 768px) {  
   .header, .footer {  

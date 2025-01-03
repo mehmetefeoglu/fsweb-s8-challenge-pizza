@@ -1,62 +1,73 @@
 
 
 .footer {  
+  
+  max-height: 561.25px;
   font-family:'Courier New', Courier, monospace;
   background-color:black; /* Koyu arka plan */  
   color: #f0f0f0; /* Açık yazı rengi */  
   padding: 20px 0;  
   font-size: 14px;  
 }  
-.footer-section-about{
-  display: flex;
-  flex-direction: column; 
-  text-align:left;
-  padding-left: 50px; 
 
-}
 
 .footer-content {  
- 
+  width: 100%;
   display: flex;  
-  justify-content: space-between;  
-  max-width: 1200px;  
-  margin:0;
+  justify-content: space-around;
   
-}
+ 
   
-  .footer-section menu{
+  
+  }
+  .footer-section-about{
+    display: flex;
+    flex-direction: column; 
+    text-align:left;
+    padding-left: 50px; 
+    width: 33vw; 
+    padding-left: 11vw;
+  
+  }
+  
+  .footer-section-menu{
     display:flex;
     flex-direction: column;
     font-family:'Barlow';
     text-align:left;
-    }
-    .hot-menu{
-      display:flex;
-      flex-direction: column;;
-      text-align:left;
-    }
-  .under{
-    display: flex;
-    justify-content: space-between;
-    padding-left: 35px; }
+    width: 34vw; 
+    padding-left: 11vw; }
+   
   
+  .footer-section-instagram{
+    
+    margin:0 auto;
+    width: 33vw;
+    padding-right: 11vw;  
+
+  }
     .instagram-images1{
-      display: flex;;
-      justify-content: space-between;
-      row-gap: 10px;
+      display: flex;
+      justify-content: space-around;
+      
       padding: 10px;
     }
     .instagram-images2{
-      display: flex;;
-     justify-content: space-between;
+      display: flex;
+      justify-content: space-around;
+     
       padding: 10px;
     }
+
+    .under{
+      display: flex;
+      justify-content: space-between;
+      padding-left: 35px; }
+
     .h_line {  
       width: 100%;        
       height: 0.07px;       
       background-color:lightslategrey;  
       border: none;  
   }  
-  .title{
-    font-family:fantasy
-  }
+  
