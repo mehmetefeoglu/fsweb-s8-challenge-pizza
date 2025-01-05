@@ -9,7 +9,7 @@ const Success = ({ order }) => {
         <div className='successMessage'>  
             <h4 className='text-lezzet'>lezzetin yolda</h4>
             <h1> SİPARİŞ ALINDI</h1>  
-            <hr class="h-line"></hr>
+            <hr className="h-line"></hr>
             <p>İsim: <strong>{order.isim}</strong> </p>  
             <p>Boyut: <strong>{order.boyut}</strong> </p> 
             <p>Hamur: <strong>{order.hamur}</strong> </p>    

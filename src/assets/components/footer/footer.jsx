@@ -36,7 +36,7 @@ const Footer = () => {
                 </div>    
         </div> 
         </div>  
-      <hr class="h_line"></hr>
+      <hr className="h-line"></hr>
       <div className='under'> <p>© 2023 Teknolojik Yemekler.</p> 
       </div>  
     </footer>  
